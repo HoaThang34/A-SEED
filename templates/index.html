@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A SEED — Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/motion.css" />
+    <script>
+      window.GREETING = "Hello there. I'm A SEED. Think of me as a quiet garden for your thoughts to grow. / Xin chào, mình là A SEED. Hãy coi mình như một khu vườn yên tĩnh để những suy nghĩ của bạn được nảy mầm.\n\nTo get started, would you prefer to chat in English or Vietnamese? And what kind of friend do you need right now – a gentle listener, or someone a bit more direct?";
+    </script>
+</head>
+<body>
+    <header class="appbar fx-reveal">
+        <div class="brand">
+            <img src="/photos/logo.png" alt="A SEED Logo" class="logo"/>
+            <div>
+                <span class="brand-title">A SEED</span>
+                <div class="brand-tagline">Aware. Soothe. Embrace. Evolve. Deliver.</div>
+            </div>
+        </div>
+        <nav class="controls-container">
+            <div class="controls">
+                <button class="chip" id="newChatBtn">➕ New Chat</button>
+                <button class="chip" id="themeToggle">🌙 Dark Mode</button>
+                <button class="chip" id="statsBtn">📊 Mood Stats</button>
+                <button class="chip" id="historyBtn">History</button>
+                <div class="user-menu">
+                    <button class="chip user-chip" id="userChip">
+                        <span id="displayName">{{ display_name }}</span> ▼
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="#" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="chat-container">
+        <div class="mood-orb-container">
+            <div id="moodOrb" class="mood-orb"></div>
+        </div>
+        <div id="chat" class="chat-area">
+            <!-- Chat messages will be appended here -->
+        </div>
+    </main>
+    
+    <footer class="composer-area fx-reveal">
+        <div class="watermark">© Students from Nguyen Tat Thanh High School for the Gifted – Lao Cai Province</div>
+        <div class="composer">
+            <textarea id="inp" placeholder="Share what's on your mind… (Enter to send)" rows="1"></textarea>
+            <button id="send" class="send">➤</button>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal show" id="intro">
+        <div class="panel center fx-reveal">
+            <h1>Welcome to <b>A SEED</b></h1>
+            <div class="muted">Nurturing positive seeds for yourself. <br> A project by students from Nguyen Tat Thanh High School for the Gifted.</div>
+            <div class="actions">
+                <button class="btn primary fx-pulse" id="start">Begin Session</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="histModal">
+      <div class="panel">
+        <div class="histbar">
+          <input id="histSearch" placeholder="Search by title..." />
+          <button id="histClose" class="btn">Close</button>
+        </div>
+        <div id="histList" class="histlist"></div>
+      </div>
+    </div>
+    <div class="modal" id="statsModal">
+        <div class="panel">
+            <div class="stats-header">
+                <h2>Session Mood Statistics</h2>
+                <button id="statsClose" class="btn">Close</button>
+            </div>
+            <div class="chart-container">
+                <canvas id="emotionChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <audio id="ambient" loop></audio> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/app.js"></script>
+    <script src="/static/theme.js"></script>
+    <script src="/static/motion.js"></script>
+</body>
+</html>

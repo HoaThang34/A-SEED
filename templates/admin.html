@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A SEED — Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <style>
+        body { font-size: 14px; }
+        .admin-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px; }
+        .card { background: var(--panel); border-radius: 24px; padding: 24px; border: 1px solid var(--border); }
+        .card h3 { margin: 0 0 16px 0; font-size: 1.2rem; }
+        .kv-grid { display: grid; grid-template-columns: 140px 1fr; gap: 12px; font-size: 0.95rem; }
+        .kv-grid .key { color: var(--muted); }
+        .kv-grid .val { font-weight: 500; }
+        .progress-bar { height: 8px; background-color: var(--border); border-radius: 99px; overflow: hidden; margin-top: 4px; }
+        .progress-bar .fill { height: 100%; width: 0%; background-color: var(--mood); transition: width 0.5s ease; }
+    </style>
+</head>
+<body>
+    <div class="appbar">
+        <div class="brand"><span class="logo">🌱</span><span class="brand-title">Admin Dashboard</span></div>
+        <div class="controls">
+            <a class="chip" href="/chat">← Back to Chat</a>
+            <button class="chip" id="restartBtn">🔄 Restart Server</button>
+            <button class="chip" id="logoutBtn">Logout</button>
+        </div>
+    </div>
+    <div class="admin-container">
+        <div class="grid">
+            <div class="card">
+                <h3>System Status</h3>
+                <div class="kv-grid">
+                    <div class="key">Uptime</div><div id="uptime" class="val">--</div>
+                    <div class="key">Python Version</div><div id="python" class="val">--</div>
+                    <div class="key">Process ID</div><div id="pid" class="val">--</div>
+                    <div class="key">Memory (RSS)</div><div id="rss" class="val">--</div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Resource Usage</h3>
+                <div class="kv-grid" style="gap: 16px;">
+                    <div class="key">CPU Usage</div>
+                    <div class="val"><span id="cpuPercent">--%</span><div class="progress-bar"><div id="cpuBar" class="fill"></div></div></div>
+                    <div class="key">RAM Usage</div>
+                    <div class="val"><span id="ramPercent">--%</span><div class="progress-bar"><div id="ramBar" class="fill"></div></div></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>AI Backend (Ollama)</h3>
+                <div class="kv-grid">
+                    <div class="key">Status</div><div id="ollamaStatus" class="val">--</div>
+                    <div class="key">Host</div><div id="ollamaHost" class="val">--</div>
+                    <div class="key">Active Model</div><div id="ollamaModel" class="val">--</div>
+                    <div class="key">Models Found</div><div id="ollamaModels" class="val">--</div>
+                </div>
+            </div>
+            <div class="card" id="gpuCard" style="display: none;">
+                <h3>GPU Status</h3>
+                <div id="gpuInfo"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/admin.js"></script>
+</body>
+</html>

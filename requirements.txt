@@ -1,0 +1,6 @@
+Flask
+requests
+psutil
+pynvml
+Werkzeug
+waitress

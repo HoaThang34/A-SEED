@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A SEED — Admin Login</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <style>
+      body { display: grid; place-items: center; min-height: 100vh; }
+      .login-card { width: min(420px, 90vw); text-align: center; }
+      .login-card .brand { justify-content: center; }
+      .form-group { margin: 20px 0; text-align: left; }
+      .form-group label { display: block; margin-bottom: 8px; color: var(--muted); font-weight: 500; }
+      .form-group input { width: 100%; padding: 14px; border-radius: 16px; font-size: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="panel login-card">
+        <div class="brand">
+            <span class="logo">🌱</span>
+            <h1>Admin Panel</h1>
+        </div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input id="username" type="text" class="input" required value="admin">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" class="input" required>
+            </div>
+            <button type="submit" class="btn primary" style="width: 100%;">Login</button>
+            <p id="authMessage" class="muted" style="margin-top: 15px; min-height: 1em;"></p>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const msgEl = document.getElementById('authMessage');
+            msgEl.textContent = 'Checking...';
+            const res = await fetch('/api/admin/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    username: document.getElementById('username').value,
+                    password: document.getElementById('password').value,
+                }),
+            });
+            if (res.ok) {
+                window.location.href = '/admin/dashboard';
+            } else {
+                msgEl.textContent = 'Invalid credentials. Please try again.';
+            }
+        });
+    </script>
+</body>
+</html>
