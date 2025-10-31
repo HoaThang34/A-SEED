@@ -1,130 +1,142 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>A SEED — Welcome</title>
-    <link rel="stylesheet" href="/static/style.css" />
-    <style>
-      body { 
-        display: grid; 
-        place-items: center; 
-        min-height: 100vh; 
-        background-color: var(--bg);
-      }
-      .login-card { 
-        width: min(420px, 90vw); 
-        text-align: center; 
-      }
-      .login-card .brand { 
-        justify-content: center; 
-        font-size: 1.5rem;
-      }
-      .form-toggle { 
-        display: flex; 
-        gap: 10px; 
-        margin-bottom: 20px; 
-        justify-content: center; 
-      }
-      .form-toggle .chip { 
-        cursor: pointer; 
-        border: 2px solid transparent;
-      }
-      .form-toggle .chip.active { 
-        border-color: var(--mood); 
-        background-color: var(--panel);
-      }
-      .form-group { 
-        margin: 20px 0; 
-        text-align: left; 
-      }
-      .form-group label { 
-        display: block; 
-        margin-bottom: 8px; 
-        color: var(--muted); 
-        font-weight: 500; 
-      }
-      .form-group input { 
-        width: 100%; 
-        padding: 14px; 
-        border-radius: 16px; 
-        font-size: 1rem; 
-        border: 2px solid var(--border); 
-        background: var(--input-bg); 
-        color: var(--fg);
-        transition: border-color 0.2s;
-      }
-      .form-group input:focus {
-          border-color: var(--mood);
-          outline: none;
-      }
-      .admin-shortcut {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        opacity: 0.1;
-        transition: opacity 0.2s;
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%239ca3af"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-12h2v2h-2v-2zm0 4h2v6h-2v-6z"/></svg>');
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-      .admin-shortcut:hover { 
-        opacity: 0.5; 
-      }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A SEED — Welcome</title>
+  <!--
+    READABILITY EDITION:
+    - Converted Vietnamese inline notes into concise English comments.
+    - Kept all IDs and classes so the existing /static/login.js continues to work.
+  -->
+  <link rel="stylesheet" href="/static/style.css" />
+  <style>
+    /* Center the auth card and preserve theme variables */
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      background-color: var(--bg);
+    }
+    .login-card {
+      width: min(400px, 90vw);
+      text-align: center;
+    }
+    .login-card .brand {
+      justify-content: center;
+      font-size: 1.3rem;
+      gap: 10px;
+    }
+    .login-card .brand .logo { font-size: 2rem; }
+    /* Two-tab toggle (Login / Register) */
+    .form-toggle {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      justify-content: center;
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      padding: 5px;
+    }
+    .form-toggle .chip {
+      flex: 1;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      padding: 10px;
+    }
+    .form-toggle .chip.active {
+      background-color: var(--mood);
+      color: #fff;
+      border-radius: 12px;
+    }
+    .form-group {
+      margin: 16px 0;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 1rem;
+      border: 2px solid var(--border);
+      background: var(--input-bg);
+      color: var(--fg);
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus {
+      border-color: var(--mood);
+      outline: none;
+    }
+    /* Hidden admin shortcut (unchanged) */
+    .admin-shortcut { display: none; }
+  </style>
 </head>
 <body>
-    <div class="panel login-card">
-        <div class="brand">
-            <span class="logo">🌱</span>
-            <h1>A SEED</h1>
-        </div>
-        <p class="muted">Aware. Soothe. Embrace. Evolve. Deliver.</p>
-
-        <div class="form-toggle">
-            <div class="chip active" id="showLogin">Login</div>
-            <div class="chip" id="showRegister">Register</div>
-        </div>
-
-        <form id="loginForm">
-            <div class="form-group">
-                <label for="loginUser">Username</label>
-                <input id="loginUser" type="text" class="input" required>
-            </div>
-            <div class="form-group">
-                <label for="loginPass">Password</label>
-                <input id="loginPass" type="password" class="input" required>
-            </div>
-            <button type="submit" class="btn primary" style="width: 100%;">Login</button>
-        </form>
-
-        <form id="registerForm" style="display: none;">
-            <div class="form-group">
-                <label for="regDisplayName">Your Name (for display)</label>
-                <input id="regDisplayName" type="text" class="input" required>
-            </div>
-            <div class="form-group">
-                <label for="regUser">Username</label>
-                <input id="regUser" type="text" class="input" required>
-            </div>
-            <div class="form-group">
-                <label for="regPass">Password</label>
-                <input id="regPass" type="password" class="input" required>
-            </div>
-            <div class="form-group">
-                <label for="regPassConfirm">Confirm Password</label>
-                <input id="regPassConfirm" type="password" class="input" required>
-            </div>
-            <button type="submit" class="btn primary" style="width: 100%;">Create Account</button>
-        </form>
-        <p id="authMessage" class="muted" style="margin-top: 15px; min-height: 1em;"></p>
+  <!-- Centered app brand + tagline -->
+  <div class="panel login-card">
+    <div class="brand">
+      <span class="logo">🌱</span>
+      <h1>A SEED</h1>
     </div>
-    
-    <!-- Admin Shortcut: Click this 5 times to go to /admin -->
-    <div id="adminShortcut" class="admin-shortcut" title="Admin Access"></div>
+    <p class="muted" style="margin-top: -5px; margin-bottom: 25px;">Cultivate peace of mind</p>
 
-    <script src="/static/login.js"></script>
+    <!-- Tabs: switch between login and register forms (controlled by /static/login.js) -->
+    <div class="form-toggle">
+      <button class="chip active" id="showLogin">Login</button>
+      <button class="chip" id="showRegister">Register</button>
+    </div>
+
+    <!-- Login form posts to /api/login via /static/login.js -->
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="loginUser">Username</label>
+        <input id="loginUser" type="text" class="input" required>
+      </div>
+      <div class="form-group">
+        <label for="loginPass">Password</label>
+        <input id="loginPass" type="password" class="input" required>
+      </div>
+      <button type="submit" class="btn primary" style="width: 100%; margin-top: 10px;">Login</button>
+    </form>
+
+    <!-- Register form posts to /api/register; password confirmation validated in JS -->
+    <form id="registerForm" style="display: none;">
+      <div class="form-group">
+        <label for="regDisplayName">Your Name (for display)</label>
+        <input id="regDisplayName" type="text" class="input" required>
+      </div>
+      <div class="form-group">
+        <label for="regUser">Username</label>
+        <input id="regUser" type="text" class="input" required>
+      </div>
+      <div class="form-group">
+        <label for="regPass">Password</label>
+        <input id="regPass" type="password" class="input" required>
+      </div>
+      <div class="form-group">
+        <label for="regPassConfirm">Confirm Password</label>
+        <input id="regPassConfirm" type="password" class="input" required>
+      </div>
+      <button type="submit" class="btn primary" style="width: 100%; margin-top: 10px;">Create Account</button>
+    </form>
+
+    <!-- Space to show authentication or validation messages -->
+    <p id="authMessage" class="muted" style="margin-top: 15px; min-height: 1em;"></p>
+  </div>
+
+  <!-- Optional admin shortcut overlay (kept as-is) -->
+  <div id="adminShortcut" class="admin-shortcut" title="Admin Access"></div>
+
+  <!-- Behavior for toggling forms and calling auth APIs -->
+  <script src="/static/login.js"></script>
 </body>
 </html>

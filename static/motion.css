@@ -1,4 +1,23 @@
-.fx-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
-.fx-reveal.is-visible { opacity: 1; transform: translateY(0); }
-.fx-pulse { animation: pulse 2.5s infinite cubic-bezier(0.4, 0, 0.6, 1); }
-@keyframes pulse { 0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.4); } 50% { opacity: 0.95; box-shadow: 0 0 0 10px rgba(96, 165, 250, 0); } }
+/* Reveal-on-scroll base state */
+.fx-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Applied by JS when the element intersects the viewport */
+.fx-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gentle pulsing animation (used for CTA buttons, etc.) */
+.fx-pulse {
+  animation: pulse 2.5s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Pulse keyframes: fade slightly + expand shadow */
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.4); }
+  50%      { opacity: 0.95; box-shadow: 0 0 0 10px rgba(96, 165, 250, 0); }
+}

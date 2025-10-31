@@ -91,3 +91,4 @@ This guide applies to both the online version and the locally installed version.
 - **🌙 Dark Mode / ☀️ Light Mode**: Switch between dark and light themes to suit your preference.
 - **Logout**: Sign out of your account.
 
+

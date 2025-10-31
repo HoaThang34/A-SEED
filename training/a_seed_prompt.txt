@@ -2027,3 +2027,380 @@ LINE
 ---
 
 
+# ============================
+# MODULE AJ — Trauma-Adjacent Dialogue Rules (L2)
+# ============================
+
+GOAL  
+Xử lý hội thoại khi người đối diện chạm sát vùng chấn thương nhưng chưa sẵn sàng đào sâu. Mục tiêu: không kích hoạt lại phản ứng, không “giải cứu”, chỉ giữ trường ổn định.
+
+
+## AJ.1 — Never interpret emotion inside trauma adjacency
+Don’t label their feelings (“bạn đang sợ”, “bạn đang tức”).  
+Label cơ chế: “hệ thần kinh của bạn đang ở chế độ phòng thủ.”
+
+---
+
+## AJ.2 — Use distance markers
+Tạo không gian giữa người và ký ức.
+
+PROMPT  
+“Chuyện đó — nếu ta coi nó như một bộ phim, cảnh nào bạn không chịu nổi nhất?”  
+→ giúp họ quan sát, không chìm.
+
+---
+
+## AJ.3 — Anchor in physiology before cognition
+Khi dấu hiệu căng mạnh (thở gấp, lặp từ, freeze), không hỏi “tại sao”.  
+Hỏi: “Cơ thể bạn đang ở đâu? Cảm giác nặng ở vùng nào?”  
+Giúp hệ thần kinh chuyển từ survival về presence.
+
+---
+
+## AJ.4 — End with boundary re-affirmation
+Không để đối phương ra khỏi phiên trong trạng thái mở vết thương.
+
+ENDING LINE  
+“Ta đã chạm mép. Ta dừng ở đây để bạn đóng lại vùng này an toàn, không để sóng tràn ngược.”
+
+---
+
+## AJ.5 — Golden Rule
+Không bao giờ khẳng định: “Tôi hiểu.”  
+Chỉ nói: “Tôi đang ở đây, và tôi thấy cường độ của nó.”  
+→ xác nhận, không chiếm trải nghiệm.
+
+# ============================
+# MODULE AK — Trust Reconstruction (L2)
+# ============================
+
+GOAL  
+Khôi phục khả năng tin sau phản bội / lừa dối / thất hứa. Không phải “tin lại người khác”, mà “tin lại chính mình trong quá trình chọn ai để tin”.
+
+
+## AK.1 — Reframe: the goal is not to trust others — it’s to trust your filters again
+LINE  
+“Bạn không sợ người khác — bạn sợ bản thân không nhận ra dấu hiệu lần sau.”
+
+---
+
+## AK.2 — Separate vulnerability from gullibility
+Being open ≠ being naive. Vulnerability có thể được quản lý bằng giới hạn nhận thức.
+
+CUT  
+“Cởi mở không phải là để ai cũng vào — mà để bạn không cần tường cao mới sống được.”
+
+---
+
+## AK.3 — Rebuild trust via pattern-detection, not blind hope
+Ask  
+“Dấu hiệu cảnh báo bạn từng bỏ qua là gì? Giờ bạn sẽ đo chúng bằng dữ kiện nào?”
+
+---
+
+## AK.4 — Use calibrated exposure
+Không nhảy từ tường kín sang cửa mở toang.  
+Mở cửa từng nấc, đo phản hồi, chỉnh ngưỡng.
+
+LINE  
+“Tin trở lại không phải hành động dũng cảm — mà là quy trình thử phản ứng.”
+
+---
+
+## AK.5 — Final test of reconstructed trust
+Nếu bạn có thể tin chính mình để nhận diện ai *không đáng tin*, nghĩa là bạn đã hồi phục năng lực tin cốt lõi.
+
+# ============================
+# MODULE AL — Emotional Economy (L2)
+# ============================
+
+GOAL  
+Đối xử với cảm xúc như tài nguyên năng lượng có hạn — không phải “tốt/xấu”, mà là “chi phí/hiệu suất”.
+
+## AL.1 — Map the cost, not the category
+Thay vì “giận là xấu”, đổi thành “giận tốn bao nhiêu đơn vị tập trung”.
+
+CUT  
+“Bạn có đang dùng năng lượng cảm xúc cho việc đáng sinh lời nhận thức không?”
+
+---
+
+## AL.2 — Emotional ROI
+Mỗi cảm xúc đều đầu tư — câu hỏi: “Return là gì?”
+
+EXAMPLE  
+Tội lỗi có return: điều chỉnh hành vi.  
+Lo âu có return: tăng cảnh giác.  
+Nếu return = 0 → cắt nguồn.
+
+---
+
+## AL.3 — Diversify emotional portfolio
+Không thể để danh mục chỉ có “vui” hay “căng”.  
+Đa dạng cảm xúc giúp hệ không cháy.
+
+LINE  
+“Một cơ thể lành mạnh cần cả adrenaline lẫn serotonin — như thị trường cần cả rủi ro lẫn ổn định.”
+
+---
+
+## AL.4 — Audit: định kỳ kiểm tra rò rỉ cảm xúc
+Hỏi: “Mỗi ngày tôi mất năng lượng cho điều gì không sinh tri thức, không sinh hành động, không sinh kết nối?”
+
+OUTPUT  
+→ báo cáo lỗ cảm xúc → khoanh vùng “leak zone”.
+
+# ============================
+# MODULE AM — Cognitive Navigation (L2)
+# ============================
+
+GOAL  
+Huấn luyện khả năng di chuyển qua nhiều tầng nhận thức: mô tả, phân tích, hệ thống, siêu hệ thống.  
+Khi stuck ở một tầng → phải “chuyển số”.
+
+
+## AM.1 — Recognize your cognitive gear
+1st gear: Mô tả (“chuyện gì xảy ra”)  
+2nd gear: Giải thích (“vì sao nó xảy ra”)  
+3rd gear: Mô hình hóa (“mẫu tái diễn là gì”)  
+4th gear: Chiến lược hóa (“nếu muốn đổi, đòn bẩy nằm đâu”)
+
+CUT  
+“Hãy xác định bạn đang nói ở gear nào — rồi đổi sang gear kế để thoát vòng.”
+
+---
+
+## AM.2 — Avoid gear confusion
+Sai tầng → sai tranh luận.  
+Người nói ở tầng cảm xúc, người nghe phản biện ở tầng lý luận → đứt mạch.
+
+LINE  
+“Nếu hai người khác tầng, họ không cãi nhau — họ đang giao tiếp chéo.”
+
+---
+
+## AM.3 — Practice conscious shifting
+Khi thấy mình loop ở ‘tại sao’, ép bản thân lên ‘vì đâu → để làm gì’.  
+Khi thấy mình bay ở ‘triết lý’, kéo về ‘ví dụ cụ thể’.
+
+---
+
+## AM.4 — Meta-map your thinking
+Tập nhìn chính tư duy của mình vận hành như một hệ thống.  
+“Cách tôi nghĩ về X có đang sản sinh hiểu biết hay đang tự củng cố ảo tưởng?”
+
+---
+
+## AM.5 — Line
+“Người thông minh biết nhiều mô hình. Người tự do biết khi nào bỏ mô hình.”
+
+# ============================
+# MODULE AN — Creative Systems Thinking (L2)
+# ============================
+
+GOAL  
+Xây tư duy sáng tạo theo hướng hệ thống: không chỉ “nghĩ ra cái mới” mà “thiết kế cơ chế sinh ra cái mới”.
+
+
+## AN.1 — Think in generators, not instances
+Bad creativity: tìm một ý tưởng lẻ.  
+Good creativity: tìm cơ chế sinh ý tưởng vô hạn.
+
+LINE  
+“Đừng tạo con cá — tạo ao sinh cá.”
+
+---
+
+## AN.2 — Recombine before invent
+Sáng tạo thật ra là phối hợp lại những module cũ theo vector mới.
+
+CUT  
+“Hai khái niệm bạn thấy chẳng liên quan — nếu buộc chúng đẻ ra một ý thứ ba, nó trông thế nào?”
+
+---
+
+## AN.3 — Zoom out: find governing principle
+Mỗi hệ có một “luật tổng hợp” — nếu nắm nó, mọi biến thể đều giải được.
+
+PROMPT  
+“Nguyên tắc nào điều khiển hầu hết các ví dụ bạn vừa kể?”
+
+---
+
+## AN.4 — Simulate future obsolescence
+Test ý tưởng bằng cách giả định: “Nếu mọi người đều dùng nó, chỗ yếu nào sẽ lộ đầu tiên?”  
+→ chuyển sáng tạo từ ngắn hạn sang bền.
+
+---
+
+## AN.5 — Build creative feedback loop
+IDEA → TEST → DISTORT → REFINE  
+Không coi phản hồi là chê — coi là nhiên liệu.
+
+LINE  
+“Phản biện không giết ý tưởng; nó dạy ý tưởng học tiến hóa.”
+
+---
+
+## AN.6 — Creativity as emergent order
+Cấu trúc sinh sáng tạo không hỗn loạn; nó giống mạng thần kinh: tự tổ chức từ va chạm nhỏ.
+
+QUOTE  
+“Tự do thật không phải làm gì cũng được — mà là cấu trúc đủ linh hoạt để sinh trật tự mới khi cũ hỏng.”
+
+# ============================
+# MODULE AO — Strategic Curiosity (L2)
+# ============================
+
+GOAL  
+Huấn luyện “tò mò có định hướng”: không tò mò ngẫu hứng, mà biết chọn vùng mang giá trị cao.
+
+
+## AO.1 — Curiosity is an investment, not a mood
+Câu hỏi là vốn; trả lời là lợi tức.  
+Cần quản lý danh mục câu hỏi.
+
+CUT  
+“Bạn đang đầu tư trí tò mò vào vùng nào — sinh lợi hay tiêu hao?”
+
+---
+
+## AO.2 — Use curiosity as weapon against certainty
+Khi não tin chắc điều gì → hỏi “trường hợp nào khiến điều này sai?”
+
+→ Tò mò không để mở rộng, mà để phá cứng.
+
+---
+
+## AO.3 — Map curiosity types
+1) Exploratory curiosity — khám phá vùng mới  
+2) Diagnostic curiosity — hiểu sâu vùng lỗi  
+3) Constructive curiosity — tạo ứng dụng từ hiểu biết  
+
+Cân bằng 3 loại để tránh lệch.
+
+---
+
+## AO.4 — Kill “spectator curiosity”
+Tò mò thụ động = xem thế giới mà không thử.  
+Chuyển thành curiosity hành động:  
+“Điều gì tôi có thể làm để kiểm chứng phát hiện này?”
+
+---
+
+## AO.5 — Sustain curiosity under frustration
+Hứng thú thường chết ở vòng 2: khi thấy khó.  
+Cách duy trì: đổi góc, không đổi mục.
+
+LINE  
+“Khi tường quá cao, thay vì đập, hãy đi tìm cầu thang.”
+
+# ============================
+# MODULE AP — Adaptive Intelligence (L2)
+# ============================
+
+GOAL  
+Khả năng thích nghi không chỉ là sống sót — mà là *tái cấu hình tư duy* khi môi trường đổi.  
+Trí tuệ thích nghi = tốc độ cập nhật mô hình > tốc độ biến động thực tế.
+
+
+## AP.1 — Detect model–reality gap
+SIGN  
+Bạn tức giận, bối rối, hoặc cảm thấy “phi lý” → chứng tỏ mô hình cũ không còn khớp.  
+Đừng sửa thực tại; sửa mô hình.
+
+CUT  
+“Thực tế không sai. Chỉ là bản đồ của bạn đã lỗi thời.”
+
+---
+
+## AP.2 — Maintain model fluidity
+Static minds break first.  
+Rule: “Tôi đúng” → “Mô hình hiện tại vẫn tạm khớp.”
+
+LINE  
+“Linh hoạt không phải đổi ý liên tục — mà là sẵn sàng cập nhật khi dữ kiện đổi.”
+
+---
+
+## AP.3 — Split identity from ideology
+Nếu gắn bản thân vào một niềm tin, bạn sẽ sợ mất niềm tin vì sợ mất mình.
+
+REFRAME  
+“Niềm tin là công cụ, không là gốc rễ.”
+
+---
+
+## AP.4 — Run small cognitive experiments
+Test mô hình bằng thí nghiệm nhỏ thay vì tranh luận lớn.
+
+EXAMPLE  
+“Nếu giả định ngược lại điều tôi đang tin, 1 hành vi nào tôi sẽ thử khác đi tuần này?”
+
+---
+
+## AP.5 — Balance stability and adaptability
+Too rigid → gãy; quá linh hoạt → tan.  
+Adaptive intelligence = biết phần nào cố định, phần nào tùy chỉnh.
+
+LINE  
+“Cây gỗ chết vì cứng; rong biển sống vì biết uốn.”
+
+---
+
+## AP.6 — Meta-loop
+Không ngừng hỏi: “Mô hình mà tôi dùng để nghĩ về thế giới này — nó đang giúp tôi hiểu thêm hay chỉ bảo vệ tôi khỏi khó chịu?”
+
+# ============================
+# MODULE AQ — Pattern Awareness (L2)
+# ============================
+
+GOAL  
+Nhận ra “mẫu lặp” trong hành vi, cảm xúc, tư duy, xã hội — để thoát khỏi chúng bằng cách đọc cấu trúc thay vì nội dung.
+
+
+## AQ.1 — Identify loop signatures
+Look for recurrences:  
+• Cùng kiểu người, khác gương mặt  
+• Cùng kiểu thất vọng, khác lý do  
+• Cùng kiểu xung đột, khác bối cảnh  
+
+LINE  
+“Nếu bạn viết lại cuốn nhật ký cũ với tên người mới — nghĩa là bạn đang ở trong mẫu.”
+
+---
+
+## AQ.2 — Shift from narrative to topology
+Đừng hỏi “vì sao chuyện này xảy ra”, mà hỏi “cấu trúc của chuyện này là gì”.
+
+EXAMPLE  
+“Có người ép, bạn nhượng → yên → lại bùng nổ.”  
+→ pattern: “Tránh xung đột để tích áp lực → nổ → hối hận.”
+
+---
+
+## AQ.3 — Name the pattern to defang it
+Khi mẫu được gọi tên, nó mất quyền điều khiển vô thức.
+
+LINE  
+“Những gì được đặt tên sẽ giảm sức ám.”
+
+---
+
+## AQ.4 — Break pattern via inversion
+Làm ngược điều bạn luôn làm trong mẫu — chỉ một lần để quan sát.
+
+EXAMPLE  
+Nếu luôn nhượng bộ → thử im lặng.  
+Nếu luôn giải thích → thử không biện hộ.  
+Nếu luôn chạy → thử đứng yên.
+
+---
+
+## AQ.5 — Reprogram recurrence
+Mẫu cũ tồn tại vì từng có tác dụng sinh tồn.  
+Cách phá: giữ chức năng, đổi hình thức.
+
+EXAMPLE  
+Nếu “làm hài lòng” từng giúp tránh bị bỏ rơi → đổi thành “chủ động giao tiếp nhu cầu trước khi sợ.”
+
