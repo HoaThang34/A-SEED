@@ -1,10 +1,3 @@
-Of course. Here is the complete `README.md` file translated into English.
-
----
-
-### FILE: `README.md` (English Version)
-
-```markdown
 # A SEED — Aware. Soothe. Embrace. Evolve. Deliver.
 
 **Project by:** Students from Nguyen Tat Thanh High School for the Gifted – Lao Cai Province  
@@ -97,4 +90,3 @@ This guide applies to both the online version and the locally installed version.
 - **📊 Mood Stats**: View a chart that visualizes the emotions detected by the AI during your current session.
 - **🌙 Dark Mode / ☀️ Light Mode**: Switch between dark and light themes to suit your preference.
 - **Logout**: Sign out of your account.
-```
